@@ -1,0 +1,10 @@
+FROM maven:3.6-jdk-11
+
+ENV WORKDIR=/project
+RUN mkdir -p ${WORKDIR}
+COPY . ${WORKDIR}
+WORKDIR ${WORKDIR}
+RUN mvn -f pom.xml clean verify
+RUN cp ${WORKDIR}/target/ch9-0.1.0.jar /app.jar
+
+ENTRYPOINT ["java","-jar","/app.jar"]

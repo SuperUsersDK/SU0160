@@ -1,0 +1,20 @@
+schemaVersion: "2.0.0"
+
+# Verify the expected version of Java is available and executable
+commandTests:
+  - name: "java version"
+    command: "java"
+    args: ["-version"]
+    exitCode: 0
+    # OpenJDK java -version stderr will include a line like:
+    # OpenJDK Runtime Environment 18.9 (build 11.0.3+7)
+    expectedError: ["OpenJDK Runtime Environment.*build 11\\..*"]
+
+# Verify the application archive is readable and owned by root
+fileExistenceTests:
+- name: 'application archive'
+  path: '/app.jar'
+  shouldExist: true
+  permissions: '-rw-r--r--'
+  uid: 0
+  gid: 0
