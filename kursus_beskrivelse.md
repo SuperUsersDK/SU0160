@@ -3,8 +3,10 @@ At sætte deltageren i stand til at anvende Docker i det daglige arbejde som ent
 Kurset henvender sig til udvikleren, testeren og driftsmedarbejderen.
 
 # Beskrivelse
-Docker er et værktøj designet til at gøre det nemt at skabe, udrulle og køre applikationer i de såkaldte containere.  
-Containere giver en udvikler/devops mulighed for at pakke en applikation samme med alle de dele som applikationen har brug for, f.eks. en mail-server, libraries, database. Det betyder at man er sikker på at applikationen kan køre uafhængig af hostens konfiguration. Samtidigt giver containere beskyttelse, da de enkle containere er adskilte på hosten.
+Docker er et værktøj designet til at gøre det nemt at skabe, udrulle og køre applikationer i de såkaldte containere.   
+Containere giver en udvikler/devops mulighed for at pakke en applikation samme med alle de dele som applikationen har brug for, f.eks. en mail-server, libraries, database.  
+Det betyder at man er sikker på at applikationen kan køre uafhængig af hostens konfiguration.  
+Samtidigt giver containere beskyttelse, da de enkle containere er adskilte på hosten.
 
 # Videre forløb
   * SU-161 - Docker Videregående & Kubernetes
