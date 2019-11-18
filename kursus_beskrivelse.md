@@ -9,7 +9,7 @@ Det betyder at man er sikker på at applikationen kan køre uafhængig af hosten
 Samtidigt giver containere beskyttelse, da de enkle containere er adskilte på hosten.
 
 # Videre forløb
-  * SU-161 - Docker Videregående
+  * [SU-161 - Docker Videregående](https://www.superusers.dk/kursus/su0161/)
 
 # Indhold 
 ## Introduktion til Docker
