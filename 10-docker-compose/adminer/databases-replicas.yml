@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+    postgres:
+        image: postgres:11-alpine
+        environment:
+            POSTGRES_PASSWORD: example
+    mysqldb:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: example
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
+        deploy:
+            replicas: 4

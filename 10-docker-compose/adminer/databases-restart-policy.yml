@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+    mysqldb:
+        image: mysql:5.6
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 5
+                window: 120s
+        environment:
+            MYSQL_ROOT_PASSWORD: example
+    postgresdb:
+        image: postgres:12-alpine
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 5
+                window: 120s
+        environment:
+            POSTGRES_PASSWORD: example
+    adminer:
+        image: adminer
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 5
+                window: 120s
+        ports:
+            - 8080:8080
