@@ -1,15 +1,23 @@
----
-version: '3'
+version: "3.9"
 
 services:
   db:
     image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresqldata
+    environment: 
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST_AUTH_METHOD=trust
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "8100:8000"
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
