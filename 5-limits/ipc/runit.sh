@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if ! docker image ls | grep -q su0160/ipc
+then
+  docker build -t su0160/ipc .  
+fi
+
 echo "Without ipc options - not working"
 echo "Running producer"
 docker container run --name ipc_producer -d su0160/ipc -producer
@@ -38,5 +43,3 @@ docker logs ipc_consumer | tail
 echo "Removing containers"
 docker container rm -f ipc_producer ipc_consumer
 sleep 3
-
-
