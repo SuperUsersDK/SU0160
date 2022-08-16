@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if ! docker image ls | grep -q su0160/calloc
+then
+  docker build -t su0160/calloc .
+fi
+
 clear
 echo "Running with 128M"
 sleep 5
