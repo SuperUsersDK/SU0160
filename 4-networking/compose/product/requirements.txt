@@ -1,2 +1,2 @@
-flask==1.0.0
+flask==2.2.5
 Flask-RESTful==0.3.5
